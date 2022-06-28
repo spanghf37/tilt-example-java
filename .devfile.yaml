@@ -41,14 +41,19 @@ components:
         attributes:
           urlRewriteSupported: false
 commands:
-  - id: 0-workaround1-patchdw
+  - id: 0-patchdw
     exec:
       commandLine: 'kubectl patch dw tilt-n-quarkus --type=merge -p ''{"spec": {"template": {"attributes": {"controller.devfile.io/scc": "container-build"}}}}'''
       workingDir: ${PROJECT_SOURCE}/201-quarkus-live-update
       component: tilt-container
-  - id: 0-workaround2-podmanlogin
+  - id: 0-podmanlogin
     exec:
       commandLine: 'podman login quay.io'
+      workingDir: ${PROJECT_SOURCE}/201-quarkus-live-update
+      component: tilt-container
+  - id: 0-buildah-bud
+    exec:
+      commandLine: 'buildah bud -t quarkus-sync-image -f src/main/docker/Dockerfile.jvm .'
       workingDir: ${PROJECT_SOURCE}/201-quarkus-live-update
       component: tilt-container
   - id: 1-tilt-up
