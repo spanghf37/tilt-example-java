@@ -1,7 +1,8 @@
 # tilt-example-java
 
 [![Build Status](https://circleci.com/gh/tilt-dev/tilt-example-java/tree/master.svg?style=shield)](https://circleci.com/gh/tilt-dev/tilt-example-java)
-[![Contribute](https://img.shields.io/static/v1?label=code%20with&message=dev%20spaces&logo=eclipseche&color=FDB940&labelColor=525C86)](https://devspaces-devspaces.apps.mloriedo-devworkspaces.devcluster.openshift.com/#https://github.com/l0rd/tilt-example-java)
+[![Contribute](https://img.shields.io/static/v1?label=code%20with&message=che%20(ephemeral)&logo=eclipseche&color=FDB940&labelColor=525C86)](https://che-dogfooding.apps.che-dev.x6e0.p1.openshiftapps.com/#https://github.com/l0rd/tilt-example-java)
+[![Contribute](https://img.shields.io/static/v1?label=code%20with&message=che%20(persistent)&logo=eclipseche&color=FDB940&labelColor=525C86)](https://che-dogfooding.apps.che-dev.x6e0.p1.openshiftapps.com/#https://github.com/l0rd/tilt-example-java&df=.devfile-persistent.yaml)
 
 An example project that demonstrates a live-updating Java server in Kubernetes. Read [doc](https://docs.tilt.dev/example_java.html).
 
